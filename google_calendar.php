@@ -76,7 +76,7 @@ class GoogleCalendar
 		else $url .= '?access_token=' . $this->accessToken;
 
 		// get response
-		$response = self::getContent($url);
+		$response = self::getContent($url, $options);
 
 		// we expect JSON so decode it
 		$json = @json_decode($response, true);
